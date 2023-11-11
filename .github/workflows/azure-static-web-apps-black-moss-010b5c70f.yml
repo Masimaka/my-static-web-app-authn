@@ -27,6 +27,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - run: export NODE_OPTIONS=--openssl-legacy-provider
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
